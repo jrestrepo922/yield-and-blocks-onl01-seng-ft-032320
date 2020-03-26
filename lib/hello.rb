@@ -9,9 +9,9 @@ end
 
 
 def learning_how_yield_works(string)
-  puts "I am currently running"
+  puts "the method is  currently running"
   yield(string)
-  puts "I am back to running =D"
+  puts "the method is  back to running =D"
 end  
 
 learning_how_yield_works("yes") {|string| puts "did the yield stop the method from running? #{string}"}
