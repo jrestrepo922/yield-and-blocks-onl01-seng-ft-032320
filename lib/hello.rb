@@ -20,3 +20,4 @@ end
 
 learning_how_yield_works("yes") {|string| puts "did the yield stop the method from running? #{string}"}
 
+learning_how_yield_works("yes")
