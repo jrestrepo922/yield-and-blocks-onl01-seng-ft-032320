@@ -13,7 +13,7 @@ end
 
 
 hello_t(["Tim", "Tom", "Jim"]) { |name|
-  if starts_with?("T")
+  if start_with?("T")
     puts "Hello, #{name}"
   end 
 }
