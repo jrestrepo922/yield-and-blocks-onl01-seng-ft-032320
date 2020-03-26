@@ -1,11 +1,39 @@
 def hello_t(array)
-  i = 0 
-  
-  while i < array.length 
-    yield array[i]
-    i = i + 1 
-  end
+ if block_given? 
+    i = 0 
+    while array.length > i 
+      puts "my current iteration is #{i}."
+      yield array[i] # one element of the array will be pass.
+      i += 1 # increasing the counter so all elements get operated on.
+    end
+  else 
+    puts "no block was given!"
+  end 
 end
+
+
+hello_t(["Tim", "Tom", "Jim"]) { |name|
+  if starts_with?("T")
+    puts "Hello, #{name}"
+  end 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 def learning_how_yield_works(string)
@@ -18,6 +46,6 @@ def learning_how_yield_works(string)
   end
 end  
 
-learning_how_yield_works("yes") {|string| puts "did the yield stop the method from running? #{string}"}
+#learning_how_yield_works("yes") {|string| puts "did the yield stop the method from running? ##{string}"}
 
-learning_how_yield_works("yes")
+#learning_how_yield_works("yes")
