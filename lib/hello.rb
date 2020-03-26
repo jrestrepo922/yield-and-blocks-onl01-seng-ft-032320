@@ -2,7 +2,7 @@ def hello_t(array)
  if block_given? 
     i = 0 
     while array.length > i 
-      puts "my current iteration is #{i}."
+      puts "my current iteration is #{i + 1}."
       yield array[i] # one element of the array will be pass.
       i += 1 # increasing the counter so all elements get operated on.
     end
